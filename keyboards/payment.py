@@ -5,6 +5,10 @@ from config import settings
 def payment_keyboard() -> InlineKeyboardMarkup:
     return InlineKeyboardMarkup(inline_keyboard=[
         [InlineKeyboardButton(
+            text=f"🏦 СБП — {settings.MANUAL_PRICE_RUB} ₽",
+            callback_data="pay_sbp"
+        )],
+        [InlineKeyboardButton(
             text=f"💳 Карта РФ — {settings.MANUAL_PRICE_RUB} ₽",
             callback_data="pay_yukassa"
         )],
